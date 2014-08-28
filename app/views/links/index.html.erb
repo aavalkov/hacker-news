@@ -1,7 +1,7 @@
 <h1>Hacker News</h1>
 <ul>
 <% @links.each do |link|%>
-  <li><%= link.name%></li>
+  <li><%= link.name%><%= link.votes.each {|vote| vote += 1} %></li>
 <%end%>
 </ul>
 
