@@ -1,7 +1,7 @@
 <h1>Hacker News</h1>
 <dl>
-<% @links.each do |link|%>
-  <dt><span class='btn btn-success btn-xs'><%= link.votes.count %></span><%= " " + link.name%></dt>
+<% @links.sort_votes.each do |link|%>
+  <dt><span class='btn btn-success btn-xs'><%= link.votes.count %></span><%= link_to "  #{link.name}", link_path(link)%></dt>
 <%end%>
 </dl>
 
