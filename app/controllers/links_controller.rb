@@ -34,6 +34,8 @@ class LinksController < ApplicationController
   def show
     @link = Link.find(params[:id])
     @vote = Vote.new
+    @comment = Comment.new
+    @comments = Comment.all
   end
 
   def destroy
