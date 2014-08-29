@@ -15,6 +15,6 @@ class CommentsController < ApplicationController
 
   private
   def comment_params
-    params.require(:comment).permit(:name)
+    params.require(:comment).permit(:name, :link_id)
   end
 end

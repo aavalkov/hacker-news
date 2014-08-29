@@ -11,28 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140828224313) do
+ActiveRecord::Schema.define(version: 20140829172501) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "authors", force: true do |t|
-    t.string "fname", limit: nil
-    t.string "lname", limit: nil
-  end
-
-  create_table "books", force: true do |t|
-    t.string "title", limit: nil
-  end
-
-  create_table "catalog", force: true do |t|
-    t.integer "title_id"
-    t.integer "author_id"
-  end
-
   create_table "comments", force: true do |t|
     t.string   "name"
-    t.integer  "links_id"
+    t.integer  "link_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -41,10 +27,6 @@ ActiveRecord::Schema.define(version: 20140828224313) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "plants", force: true do |t|
-    t.string "plant_name", limit: nil
   end
 
   create_table "votes", force: true do |t|

@@ -1,6 +1,6 @@
 development:
   adapter: postgresql
-  datbase: hacker_news_development
+  database: hacker_news_development
 
 test:
   adapter: postgresql
