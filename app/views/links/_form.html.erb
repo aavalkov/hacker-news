@@ -1,9 +1,10 @@
 <%= render("layouts/errors", :object => @link) %>
-
+<form role='form'>
 <%= form_for(@link) do |f| %>
   <div class="form-group">
     <%= f.label :name %>
     <%= f.text_field :name %>
   </div>
-  <%= f.submit(:class => 'btn btn-sucess') %>
+  <%= f.submit(:class => 'btn btn-success') %>
 <% end%>
+<form>

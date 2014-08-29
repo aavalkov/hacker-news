@@ -12,7 +12,7 @@
 <h4>Comments</h4>
 <ol>
   <% @link.comments.each do |comment|%>
-    <li><%= comment.name %></li>
+    <li><%=link_to "#{comment.name}", comment_path(comment)%></li>
   <%end%>
 </ol>
 <%= render 'comments/form'%>

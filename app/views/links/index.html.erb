@@ -1,8 +1,8 @@
 <h1>Hacker News</h1>
 <dl>
 <% @links.sort_votes.each do |link|%>
-  <dt><span class='btn btn-success btn-xs'><%= link.votes.count %></span><%= link_to "  #{link.name}", link_path(link)%></dt>
+  <dt><span class='btn-xs' id='link-button'><%= link.votes.count %></span><%= link_to "  #{link.name}", link_path(link)%></dt>
 <%end%>
 </dl>
 
-<%= link_to "New Link", new_link_path, :class =>'btn btn-info' %>
+<%= link_to "New Link", new_link_path, :class =>'btn btn-info btn-sm' %>
