@@ -1,5 +1,6 @@
 <h1><%= link_to "Hacker News", links_path %></h1>
 
+<div class ='col-md-4'>
 <h2><%= @link.name %> </h2>
 
 <%= render 'votes/form'%>
@@ -8,12 +9,15 @@
                       :data =>{:confirm => "Are you sure?",
                                 :method => "delete"},
                       :class => "btn btn-danger btn-sm" %>
+</div>
+<div class ="col-md-8">
 
-<h4>Comments</h4>
+<h3>Comments</h3>
 <ol>
   <% @link.comments.each do |comment|%>
     <li><%=link_to "#{comment.name}", comment_path(comment)%></li>
   <%end%>
 </ol>
 <%= render 'comments/form'%>
+</div>
 
